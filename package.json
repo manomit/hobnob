@@ -1,0 +1,30 @@
+{
+  "name": "hobnob",
+  "version": "0.1.0",
+  "description": "Like an user directory",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && babel src -d dist",
+    "serve": "yarn run build && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon -w src --exec yarn run serve",
+    "fix": "eslint src --fix",
+    "lint": "eslint src",
+    "precommit": "yarn run lint"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "husky": "^4.2.3"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.3"
+  }
+}
